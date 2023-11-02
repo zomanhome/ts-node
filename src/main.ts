@@ -1,1 +1,5 @@
-console.log('Hello world')
+import {App} from "./infra/App"
+
+const app = new App()
+
+app.init().then()
