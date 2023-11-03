@@ -1,6 +1,6 @@
 import {IPerson} from "./Person.types"
 import {Body, Get, JsonController, Param, Post} from "routing-controllers"
-import {ApiResponse} from "../../../helpers/ApiResponse";
+import {ApiResponse} from "../../../helpers/ApiResponse"
 import {ApiError} from "../../../helpers/ApiError"
 import {CreatePerson} from "./CreatePerson.dto"
 import {validate} from "class-validator"
@@ -10,7 +10,6 @@ const storeData: IPerson[] = []
 @JsonController("/person")
 export default class Person {
     @Get()
-    // @UseAfter(HTTPResponseLogger)
     async getAll() {
         return new ApiResponse(true, storeData)
     }
